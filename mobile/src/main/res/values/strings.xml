@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">小k wear</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="internet_err">啊偶,网络不通T_T</string>
+    <string name="about">本应用由2个拥有梦想的高三党挤出时间开发，无广告不收费。\n如果您愿意支持我们，
+    哪怕只是一元钱，哪怕完全不足以支付服务器/域名/备案等各种费用，我们也将十分感谢 :)\n支付宝:1059836454@qq.com</string>
+</resources>

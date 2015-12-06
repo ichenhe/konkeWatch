@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cc.chenhe.konke.watch.ui.MyBar
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:middle_text="详情"
+        app:right_text="刷新"
+        app:show_loading="false"></cc.chenhe.konke.watch.ui.MyBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:id="@+id/cbState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/check_box_device_state"
+            android:button="@null"
+            android:checked="true"
+            android:text="" />
+    </RelativeLayout>
+
+    <LinearLayout style="@style/leba_bg_layout">
+
+        <LinearLayout
+            style="@style/leba_bg_top_layout">
+
+            <ImageView
+                android:id="@+id/ivIco"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ico_device_power_protect" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:layout_weight="1.0"
+                android:text="充电保护"
+                android:textColor="#ff333333"
+                android:textSize="16.0dip" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sbPowerProtect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/leba_shape_line" />
+
+        <LinearLayout
+            style="@style/leba_bg_mid_layout">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ico_device_light" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:layout_weight="1.0"
+                android:text="小夜灯"
+                android:textColor="#ff333333"
+                android:textSize="16.0dip" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sbLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

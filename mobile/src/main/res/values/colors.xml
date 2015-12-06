@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义 -->
+    <color name="text_button_normal">#199DCD</color>
+
+    <color name="button_unselected">#ff54acea</color>
+    <color name="button_selected">#ff419de4</color>
+    <color name="transparent">#00000000</color>
+    <color name="scrollbar_tbumb_bg">#ffd5d5d5</color>
+    <color name="white">#ffffffff</color>
+    <color name="color_divider">#ffe4e4e4</color>
+    <color name="extrainfo">#ff333333</color>
+    <color name="sc_red">#ffff0000</color>
+    <color name="sc_window_background">#ff547896</color>
+    <color name="sc_nonchat_contact">#ff222222</color>
+    <color name="sc_chat_contact">#ffeeeeee</color>
+    <color name="sc_black">#ff000000</color>
+    <color name="sc_white">#ffffffff</color>
+    <color name="sc_mainactivity_bg">#992e2e2e</color>
+    <color name="sc_homtlist_bg">#ffffffff</color>
+    <color name="sc_hometab_text_s">#ff222222</color>
+    <color name="sc_hometab_text">#ff666666</color>
+    <color name="shape_line">#ffcccccc</color>
+
+    <!-- 文本颜色 -->
+    <color name="text_view_key">#ff333333</color>
+    <color name="text_view_value">#ffa2a2a2</color>
+
+    <!-- bar点击效果 -->
+    <color name="bar_text_normal">#bdf1fe</color>
+    <color name="bar_text_select">#ffffff</color>
+
+    <!-- 底部tab -->
+    <color name="tab_selected">#00a2e5</color>
+    <color name="tab_normal">#808080</color>
+
+    <!-- 定时列表菜单点击效果 -->
+    <color name="menu_index_lv_normal">#00000000</color>
+    <color name="menu_index_lv_select">#a0000000</color>
+
+    <color name="dialog">#A5DC86</color>
+</resources>

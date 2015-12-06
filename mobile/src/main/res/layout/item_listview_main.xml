@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/leba_bg_layout">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            style="@style/leba_bg_single_layout">
+
+            <ImageView
+                android:id="@+id/ivIco"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ico_device_1" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:layout_weight="1.0"
+                android:text="温度联动"
+                android:textColor="#ff333333"
+                android:textSize="16.0dip" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sbPower"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

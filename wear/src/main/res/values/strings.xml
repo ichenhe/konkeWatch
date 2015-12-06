@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">小k wear</string>
+    <string name="hello_world">Hello World!</string>
+
+    <string name="time_out">请求超时</string>
+    <string name="err">执行失败</string>
+</resources>

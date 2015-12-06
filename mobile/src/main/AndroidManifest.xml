@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cc.chenhe.konke.watch">
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="cc.chenhe.konke.watch.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name="cc.chenhe.konke.watch.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cc.chenhe.konke.watch.AtyFrame"></activity>
+        <activity android:name="cc.chenhe.konke.watch.AtyOauth"></activity>
+        <activity android:name="cc.chenhe.konke.watch.AtyDetailMini"></activity>
+        <activity android:name=".AtyWebView"></activity>
+
+        <receiver android:name=".data.RecNetwork">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="org.owa.wear.app"
+            android:resource="@xml/wearable_app_desc"
+            tools:replace="android:resource" />
+        <meta-data
+            android:name="com.mobvoi.ticwear.app"
+            android:resource="@xml/wearable_app_desc" />
+        <!-- openwatch 渠道号 -->
+        <meta-data
+            android:name="OPENWATCH_CHANNEL"
+            android:value="common" />
+        <!-- openwatch app key -->
+        <meta-data
+            android:name="OPENWATCH_APPKEY"
+            android:value="50de58323c7c9f1ed1fc0f0066ebff0e" />
+        <!-- google play service版本号 不要随意修改 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- google play 中国版service版本号 不要随意修改 -->
+        <meta-data
+            android:name="com.google.android.wearable.version"
+            android:value="@integer/android_wear_china_services_version" />
+        <!-- duwear service版本号 不要随意修改 -->
+        <meta-data
+            android:name="org.owa.wear.ows.sdk.version"
+            android:value="@integer/open_wearable_service_version" />
+        <!-- 继承自OpenWatchListenerService的子类service 下面service name需要修改成自己的类名 -->
+        <service android:name="cc.chenhe.konke.watch.SerWatchListener">
+            <intent-filter>
+                <!-- 兼容android wear谷歌版和中国版 -->
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+                <!-- 兼容duwear-->
+                <action android:name="org.owa.wear.ows.BIND_LISTENER" />
+                <!-- 兼容ticwear -->
+                <action android:name="com.mobvoi.android.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
